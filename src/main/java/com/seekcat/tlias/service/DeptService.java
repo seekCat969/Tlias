@@ -1,8 +1,17 @@
 package com.seekcat.tlias.service;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
+import com.seekcat.tlias.pojo.Dept;
+import java.util.List;
 
-@Service
 public interface DeptService {
+
+    List<Dept> selectDept();
+
+    void deleteDept(Integer id);
+
+    void insertDept(Dept dept);
+
+    void updateDept(Dept dept);
+
+    Dept selectDeptWithId(Integer id);
 }
