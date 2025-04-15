@@ -12,13 +12,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Emp {
     private Integer id;
-    private String userName;
+    private String username;
     private String password;
     private String name;
     private short gender;
     private String image;
     private short job;
-    private LocalDate entryDate;
+    private LocalDate entrydate;
     private Integer deptId;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
