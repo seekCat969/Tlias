@@ -5,7 +5,7 @@
 
 <mapper namespace="com.seekcat.tlias.mapper.DeptMapper">
 
-<!--    <select id="selectDept" resultType="com.seekcat.tlias.pojo.Dept">-->
+<!--    <select id="selectDept" resultType="com.com.tlias.pojo.Dept">-->
 <!--        select *-->
 <!--        from dept-->
 <!--    </select>-->
