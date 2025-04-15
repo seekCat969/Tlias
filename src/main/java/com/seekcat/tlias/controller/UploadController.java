@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/upload")
 public class UploadController {
     @Resource
-    OSSUtils ou;
+    private OSSUtils ou;
 
     @PostMapping
     public Result uploadImage(MultipartFile image) throws Exception {

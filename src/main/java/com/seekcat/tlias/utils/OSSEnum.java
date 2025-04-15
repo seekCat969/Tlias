@@ -4,7 +4,7 @@ public enum OSSEnum {
     END_POINT("https://oss-cn-chengdu.aliyuncs.com"),
     BUCKET_NAME("tlias-learn-project"),
     REGION("cn-chengdu"),
-    OBJECT_NAME("images/"),
+    OBJECT_NAME("images"),
     IMAGE_URL("https://tlias-learn-project.oss-cn-chengdu.aliyuncs.com/");
 
     private String value;
