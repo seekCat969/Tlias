@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Emp {
     private Long id;
     private String username;
