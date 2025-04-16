@@ -38,8 +38,7 @@ public class EmpController {
     }
 
     /**
-     * 批量删除员工
-     */
+     * 批量删除员工*/
     @DeleteMapping("/{ids}")
     public Result deleteEmps(@PathVariable Integer[] ids) {
         esl.deleteEmps(ids);
@@ -50,9 +49,24 @@ public class EmpController {
      *插入员工*/
     @PostMapping()
     public Result InsertEmp(@RequestBody Emp emp) {
-        log.info("debug start");
         esl.InsertEmp(emp);
-        log.info("debug end");
+        return Result.success();
+    }
+
+    /**
+     * 根据ID查询员工
+     * */
+    @GetMapping("/{id}")
+    public Result selectEmpWithId(@PathVariable Integer id){
+        return Result.success(esl.selectEmpWithId(id));
+    }
+
+    /**
+     * 修改员工
+     * */
+    @PutMapping
+    public Result updateEmp(@RequestBody Emp emp){
+        esl.updateEmp(emp);
         return Result.success();
     }
 

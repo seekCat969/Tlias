@@ -24,6 +24,11 @@ public interface EmpMapper {
     void deleteEmps(Integer[] ids);
 
     void InsertEmp(Emp emp);
+
+    @Select("select * from emp where id = #{name}")
+    Emp selectEmpWithId(Integer id);
+
+    void updateEmp(Emp emp);
 }
 
 

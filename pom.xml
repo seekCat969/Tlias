@@ -8,11 +8,11 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.seekCat</groupId>
+	<groupId>com.seekcat</groupId>
 	<artifactId>Tlias</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>Tlias</name>
-	<description>Tlias</description>
+	<description>Tlias is a simple Java web project</description>
 	<url/>
 	<licenses>
 		<license/>

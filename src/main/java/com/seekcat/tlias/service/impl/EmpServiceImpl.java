@@ -39,4 +39,15 @@ public class EmpServiceImpl implements EmpService {
         emp.setUpdateTime(LocalDateTime.now());
         em.InsertEmp(emp);
     }
+
+    @Override
+    public Emp selectEmpWithId(Integer id) {
+        return em.selectEmpWithId(id);
+    }
+
+    @Override
+    public void updateEmp(Emp emp) {
+        emp.setUpdateTime(LocalDateTime.now());
+        em.updateEmp(emp);
+    }
 }
