@@ -8,10 +8,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Emp {
-    private Integer id;
+    private Long id;
     private String username;
     private String password;
     private String name;

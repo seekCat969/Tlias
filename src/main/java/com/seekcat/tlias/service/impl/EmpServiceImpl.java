@@ -49,4 +49,9 @@ public class EmpServiceImpl implements EmpService {
         emp.setUpdateTime(LocalDateTime.now());
         em.updateEmp(emp);
     }
+
+    @Override
+    public Emp login(Emp emp) {
+        return em.login(emp);
+    }
 }

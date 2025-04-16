@@ -28,6 +28,9 @@ public interface EmpMapper {
     Emp selectEmpWithId(Integer id);
 
     void updateEmp(Emp emp);
+
+    @Select("select * from emp where username = #{username} and password = #{password}")
+    Emp login(Emp emp);
 }
 
 
