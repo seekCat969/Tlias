@@ -4,7 +4,6 @@ import com.seekcat.tlias.pojo.Dept;
 import com.seekcat.tlias.pojo.Result;
 import com.seekcat.tlias.service.impl.DeptServiceImpl;
 import jakarta.annotation.Resource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

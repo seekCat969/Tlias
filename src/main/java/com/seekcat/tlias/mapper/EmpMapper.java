@@ -1,7 +1,6 @@
 package com.seekcat.tlias.mapper;
 
 import com.seekcat.tlias.pojo.Emp;
-import com.seekcat.tlias.pojo.PageBean;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

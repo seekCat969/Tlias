@@ -2,8 +2,6 @@ package com.seekcat.tlias.mapper;
 
 import com.seekcat.tlias.pojo.Dept;
 import org.apache.ibatis.annotations.*;
-
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Mapper
