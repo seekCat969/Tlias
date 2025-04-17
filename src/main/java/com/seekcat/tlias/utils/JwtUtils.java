@@ -5,8 +5,6 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.impl.DefaultClaims;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 import java.util.Map;
@@ -14,7 +12,6 @@ import java.util.Map;
 @Slf4j
 public class JwtUtils {
 
-    private static final Logger log = LoggerFactory.getLogger(JwtUtils.class);
     private static String KEY = "seekCat";
 
     private JwtUtils(){}
@@ -35,8 +32,7 @@ public class JwtUtils {
                     .parseClaimsJws(token)
                     .getBody();
         }catch (Exception e){
-//            e.printStackTrace();
-            log.info("error:{}",e.getMessage());
+            log.error(e.toString());
         }
         return claims;
     }
