@@ -3,6 +3,7 @@ package com.seekcat.tlias.controller;
 import com.seekcat.tlias.pojo.Dept;
 import com.seekcat.tlias.pojo.Result;
 import com.seekcat.tlias.service.impl.DeptServiceImpl;
+import com.seekcat.tlias.service.impl.EmpServiceImpl;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,5 +44,7 @@ public class DeptController {
         dsi.updateDept(dept);
         return Result.success();
     }
+
+
 
 }

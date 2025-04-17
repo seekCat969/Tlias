@@ -17,9 +17,7 @@ public class EmpController {
     @Resource
     private EmpServiceImpl esl;
 
-    /**
-     * 分页查询员工
-     */
+    /**分页查询员工*/
     @GetMapping()
     public Result selectEmpIndividualPage(@RequestParam(defaultValue = "1") Integer page,
                                           @RequestParam(defaultValue = "10") Integer pageSize,
@@ -32,37 +30,30 @@ public class EmpController {
         return Result.success(pageBean);
     }
 
-    /**
-     * 批量删除员工*/
+    /**批量删除员工*/
     @DeleteMapping("/{ids}")
     public Result deleteEmps(@PathVariable Integer[] ids) {
         esl.deleteEmps(ids);
         return Result.success();
     }
 
-    /**
-     *插入员工*/
+    /**插入员工*/
     @PostMapping()
     public Result InsertEmp(@RequestBody Emp emp) {
         esl.InsertEmp(emp);
         return Result.success();
     }
 
-    /**
-     * 根据ID查询员工
-     * */
+    /**根据ID查询员工*/
     @GetMapping("/{id}")
     public Result selectEmpWithId(@PathVariable Integer id){
         return Result.success(esl.selectEmpWithId(id));
     }
 
-    /**
-     * 修改员工
-     * */
+    /**修改员工*/
     @PutMapping
     public Result updateEmp(@RequestBody Emp emp){
         esl.updateEmp(emp);
         return Result.success();
     }
-
 }

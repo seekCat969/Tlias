@@ -54,4 +54,9 @@ public class EmpServiceImpl implements EmpService {
     public Emp login(Emp emp) {
         return em.login(emp);
     }
+
+    @Override
+    public void deleteEmpWithDeptId(Integer deptId) {
+        em.deleteEmpWithDeptId(deptId);
+    }
 }

@@ -1,6 +1,7 @@
 package com.seekcat.tlias.mapper;
 
 import com.seekcat.tlias.pojo.Emp;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -31,6 +32,9 @@ public interface EmpMapper {
 
     @Select("select * from emp where username = #{username} and password = #{password}")
     Emp login(Emp emp);
+
+    @Delete("delete from emp where dept_id = #{deptId}")
+    void deleteEmpWithDeptId(Integer deptId);
 }
 
 

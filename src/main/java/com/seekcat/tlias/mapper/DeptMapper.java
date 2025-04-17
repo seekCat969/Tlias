@@ -2,6 +2,8 @@ package com.seekcat.tlias.mapper;
 
 import com.seekcat.tlias.pojo.Dept;
 import org.apache.ibatis.annotations.*;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Mapper
@@ -23,4 +25,7 @@ public interface DeptMapper {
 
     @Select("select * from dept where id = #{id}")
     Dept selectDeptWithId(Integer id);
+
+    @Insert("insert into log (update_time, description) VALUES (#{now},#{str})")
+    void toLog(LocalDateTime now, String str);
 }
