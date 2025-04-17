@@ -15,11 +15,10 @@ public class SqlLog {
 
 
     @Resource
-    private DeptMapper dm;
+    private LogMapper lm;
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)//在发生传播事务的时候创建一个新的事务
     public void insertLog(Object msg){
-        log.info("输出了日志");
-        dm.toLog(LocalDateTime.now(),msg.toString());
+        lm.toLog(LocalDateTime.now(),msg.toString());
     }
 }

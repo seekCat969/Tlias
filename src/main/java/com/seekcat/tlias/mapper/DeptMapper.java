@@ -26,6 +26,4 @@ public interface DeptMapper {
     @Select("select * from dept where id = #{id}")
     Dept selectDeptWithId(Integer id);
 
-    @Insert("insert into log (update_time, description) VALUES (#{now},#{str})")
-    void toLog(LocalDateTime now, String str);
 }
